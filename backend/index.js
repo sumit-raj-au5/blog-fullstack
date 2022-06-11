@@ -31,6 +31,7 @@ const DEBUG=+process.env.DEBUG;
         // app.use('/', shortURL);
         app.use('/userauth', userRoute);
         app.use('/blog', blogRoute);
+        app.use('/', (req,res)=>{res.send('Welcome Home')});
         //starting backend on PORT
         app.listen(process.env.PORT, ()=>{
         if(DEBUG)
